@@ -14,7 +14,7 @@ export const CreateContact = ({ createContactList }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    createContactList(name, number);
+    createContactList({ name, number });
     setName('');
     setNumber('');
   };
