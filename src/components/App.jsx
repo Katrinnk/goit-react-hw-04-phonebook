@@ -18,6 +18,7 @@ export const App = () => {
   const [contacts, setContacts] = useState(
     () => JSON.parse(localStorage.getItem('contacts')) ?? initialContacts
   );
+  //при видаленні всих контактів, лишається пустий масив і не підтягуються initialContacts
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
